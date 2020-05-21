@@ -1,31 +1,39 @@
-���v��
+■要件
 https://iphone-mania.jp/news-289821/
 
 
-�����������
-WordPress�̃C���X�g�[��
-MailPoet�̃C���X�g�[��
-�@�EMAILPOET NEWSLETTERS (WYSIJA)�Fhttps://ja.wordpress.org/plugins/wysija-newsletters/
-�@�E���̓t�H�[���쐬
-�@�@�E���[���A�h���X
-�@�@�E�X�R�[�h
-�@�E�V���[�g�R�[�h���R�s�[���Ă���
-�Œ�y�[�W��MailPoet�̃V���[�g�R�[�h��\��t���Č��J
-�@�E���J�y�[�W��URL���R�s�[����
-QR Redirector�̃C���X�g�[��
-�@�EQR Redirects ���� Add QR Redirect �ŐV�K�쐬
-�@�@���J����URL���g�p���č쐬����
+■やったこと
+WordPressのインストール
+MailPoetのインストール
+　・MAILPOET NEWSLETTERS (WYSIJA)：https://ja.wordpress.org/plugins/wysija-newsletters/
+　・入力フォーム作成
+　　・メールアドレス
+　　・店コード
+　・ショートコードをコピーしておく
+固定ページでMailPoetのショートコードを貼り付けて公開
+　・公開ページのURLをコピーする
+QR Redirectorのインストール
+　・QR Redirects から Add QR Redirect で新規作成
+　　公開したURLを使用して作成する
 
-�����[���z�M
-�X�R�[�h���Z�O�����g�w�肵�ă��[�����M����
+■メール配信
+店コードをセグメント指定してメール送信する
 
 
 
-�����l
-�E�X�R�[�h���Ƃɓ��̓t�H�[���ƌŒ�y�[�W��QR�R�[�h���쐬����
-�@�EJavaScript�̎���������Ώ�L�̎�Ԃ͕s�v
-�@�@�iQR�R�[�h�쐬���ɓX�R�[�h��ύX���āA�X�R�[�h���ƂɈႤQR�R�[�h���쐬����B
-�@�@�@GET�p�����[�^�̓X�R�[�h���A�X�R�[�h���ɏ����ݒ肷��B
-�@�@�@�X�R�[�h����display:none����CSS��K�p������B
-�@�@�@�z���������60���j
+■備考
+・店コードごとに入力フォームと固定ページとQRコードを作成する
+　・JavaScriptの実装をすれば上記の手間は不要
+　　（QRコード作成時に店コードを変更して、店コードごとに違うQRコードを作成する。
+　　　GETパラメータの店コードを、店コード欄に初期設定する。
+　　　店コード欄をdisplay:noneするCSSを適用させる。
+　　　想定実装時間60分）
+
+
+
+■結論
+アプリケーション側は余裕。
+サーバー構築は分散が必要なので、インフラ費用次第
+（max 5000アクセス/分 ぐらい？）
+
 
